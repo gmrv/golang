@@ -1,0 +1,14 @@
+version: '2'
+services:
+  golang:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8888"
+    environment:
+      - STAGE=HW
+    command: go run app.go
+    
+    # in case of compilation
+    #command: ./app    
